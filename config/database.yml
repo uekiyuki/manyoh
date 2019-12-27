@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: manyoh_development
+
+test:
+  <<: *default
+  database: manyoh_test
+
+production:
+  <<: *default
+  database: manyoh_production
+  username: manyoh
+  password: <%= ENV['MANYOH_DATABASE_PASSWORD'] %>
