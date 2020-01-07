@@ -1,7 +1,7 @@
 # README
 Users
 | カラム名 | データ型 |
-| --- | --- |
+| :--- | :--- |
 | id | integer |
 | name | string |
 | e-mail | stiring |
@@ -11,7 +11,7 @@ Users
 
 Tasks
 | カラム名 | データ型 |
-| --- | --- |
+| :--- | :--- |
 | id | integer |
 | user_id(FK) | references |
 | title | stiring |
@@ -22,10 +22,10 @@ Tasks
 
 laberings
 | カラム名 | データ型 |
-| --- | --- |
+| :--- | :--- |
 | id | integer |
 | task_id(FK) | references |
-| label_id(FK) | references |
+| label_id(FK) | references|
 
 Labels
 | カラム名 | データ型 |
